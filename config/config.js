@@ -1,4 +1,3 @@
 module.exports = {
-    boardSize: 4, 
-    highScore: 2048
+    winningCondition: 2048,
 }

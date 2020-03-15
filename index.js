@@ -1,21 +1,36 @@
 console.log("script started");
+const game = require("./gameHelper");
 const input = require("./service/input");
-const output = require("./service/display");
-async function fetchMove() {
-  const name = await input.name();
-  const move = await input.move();
-  console.log(`${name} , your move is`, move);
-  let board = [
-    [0, 0, 0, 0],
-    [0, 0, 0, 0],
-    [0, 0, 0, 0],
-    [0, 0, 0, 0]
-  ];
+// const config = require("./config/config");
 
-  output.displayBoard(board);
+async function initializeGame() {
+  let gameState = {}; // stores the state for a game
+  gameState.name = await input.name();
+  gameState.size = await input.size();
+  gameState.board = game.blankBoard(gameState.size);
+  gameState.score = 0;
+  gameState.status = "progress";
+
+  return gameState;
 }
 
+async function fetchMove(gameState) {
+  const dir = await input.move();
+  let {name, status} =  gameState
+  gameState = game.move(gameState, dir);
+  if(status == "progress"){
+      fetchMove(gameState);
+  }else{
+      console.log(`${name}, You ${status}`)
+  }
+}
 
-fetchMove();
+async function startGame(){
+   let gameState =  await initializeGame();
+   console.log(gameState)
+   gameState.board = game.randomTile(gameState);
+   gameState.board = game.randomTile(gameState);
+   fetchMove(gameState);
+}
 
-// input.move.then(output => console.log(output.move, "was your move"));
+startGame();
