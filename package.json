@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc ava test/**/*.spec.js --verbose"
   },
   "author": "jenish jain",
   "license": "ISC",
@@ -15,6 +15,6 @@
   },
   "devDependencies": {
     "ava": "^3.6.0",
-    "sinon": "^9.0.2"
+    "nyc": "^15.0.1"
   }
 }
