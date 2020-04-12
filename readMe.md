@@ -1,4 +1,4 @@
-# 2408 Game
+# 2048 Game
 
 ## Game features
 
