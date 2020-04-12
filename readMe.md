@@ -14,3 +14,7 @@
 ## game demo
 
 ![Game Demo](assets/gameDemo.gif)
+
+## test coverage
+
+![Test Coverage](assets/test-coverage.png)
