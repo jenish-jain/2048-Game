@@ -1,3 +1,5 @@
+const chalk = require('chalk');
+const score = chalk.bold.magenta;
 const config = require("../config/config");
 let state = {}; // stores the game state
 let size = 0;
@@ -69,7 +71,7 @@ exports.move = (gameState, dir) => {
   }
   
   board = this.randomTile(state);
-  console.log(`${name} your score is : ${state.score} `);
+  console.log(score(`${name} your score is : ${state.score} `));
 
   return state; // return final board
 };

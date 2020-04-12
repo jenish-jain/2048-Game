@@ -4,11 +4,17 @@
   "description": "2048 game",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "jenish jain",
   "license": "ISC",
   "dependencies": {
+    "chalk-pipe": "^3.0.0",
     "inquirer": "^7.1.0"
+  },
+  "devDependencies": {
+    "ava": "^3.6.0",
+    "sinon": "^9.0.2"
   }
 }

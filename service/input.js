@@ -1,4 +1,6 @@
 const inquirer = require("inquirer");
+const chalk = require('chalk');
+const info = chalk.bold.blue;
 
 const askName = [
   {
@@ -49,6 +51,22 @@ exports.name = () => {
 
 exports.move = () => {
   return inquirer.prompt(askMove).then(answers => {
+    let message ;
+    switch (answers["move"]){
+      case '1':
+        message  =  " you moved left";
+        break;
+      case '2':
+        message  =  " you moved right";
+        break;
+      case '3':
+        message  =  " you moved up";
+        break;
+      case '4':
+        message  =  " you moved down";
+        break;
+    }
+    console.log(info(message));
     return answers["move"];
   });
 };
