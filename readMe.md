@@ -13,4 +13,4 @@
 
 ## game demo
 
-![Game Demo](assets/2020-04-12 16.15.55.gif)
+![Game Demo](assets/gameDemo.gif)
