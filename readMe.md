@@ -10,3 +10,7 @@
 * Initialize the game with two random tiles.
 * The program moves all the tiles in the given direction and merge adjacent tiles.  
 * Program randomly select an empty location and place 2 or 4
+
+## game demo
+
+![Game Demo](assets/2020-04-12 16.15.55.gif)
