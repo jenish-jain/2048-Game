@@ -18,3 +18,7 @@
 ## test coverage
 
 ![Test Coverage](assets/test-coverage.png)
+
+## My High Score :p
+
+![high score jenish](assets/highScore.png)
